@@ -1,7 +1,5 @@
 package ru.stqu.pft.sandbox;
 
-import javax.sound.midi.Soundbank;
-
 public class MyFirstProgram {
 
   public static void main(String[] args) {
@@ -10,14 +8,20 @@ public class MyFirstProgram {
     hello("text");
     hello("robert");
 
-    double len = 5;
+    Square s = new Square(5);
 
-    System.out.println("Powieszchnia o boku " + len + "równa sie " + area(len));
 
-    double a = 4;
-    double b = 6;
+    System.out.println("Powieszchnia o boku " + s.l + "równa sie " + s.area());
 
-    System.out.println("Powieszchnia prostokątu o boku " + a + " i " + b + "  równa sie " + area(a, b));
+    Rectangle r = new Rectangle(4,6 );
+
+
+    System.out.println("Powieszchnia prostokątu o boku " + r.a + " i " + r.b + " równa sie " + r.area());
+
+    Point p1 = new Point(1,1);
+    Point p2 = new Point(1, 4);
+    System.out.println("Distance between two points " + "(" + p1.x + "," + p1.y + ")," + "(" + p2.x + "," + p2.y + ") = " + p1.distance(p2));
+
   }
 
   public static void hello(String sombody) {
@@ -25,13 +29,12 @@ public class MyFirstProgram {
 
   }
 
-  public static double area(double len) {
-    return len * len;
-  }
 
 
-  public static double area(double a, double b) {
-    return a * b;
-  }
+
+
 }
+
+
+
 
